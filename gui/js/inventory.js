@@ -80,14 +80,12 @@ EditButton.addEventListener('click', event => {
     const ClassInput = EditPopUp.querySelector('#edit-class')
     const PriceInput = EditPopUp.querySelector('#edit-price')
     const QuantityInput = EditPopUp.querySelector('#edit-quantity')
-    const ImageInput = EditPopUp.querySelector('#edit-image')
-
+    
     ItemNameInput.value = InventoryTable.selection.itemname
     ClassInput.value = InventoryTable.selection.class
     PriceInput.value = InventoryTable.selection.price
     QuantityInput.value = InventoryTable.selection.quantity
-    ImageInput.value = InventoryTable.selection.image
-
+    
     DisplayPopUp(EditPopUp)
   } else {
     window.alert('Make a selection first by clicking an item in the inventory list')
@@ -120,9 +118,7 @@ addConfirm.addEventListener('click', async () => {
   const ClassInput = AddPopUp.querySelector('#add-class')
   const PriceInput = AddPopUp.querySelector('#add-price')
   const QuantityInput = AddPopUp.querySelector('#add-quantity')
-  const ImageInput = AddPopUp.querySelector('#add-image')
-
-
+  
   if (ItemNameInput.value === '') {
     window.alert('Fill Up Item Name')
   } else if (ClassInput.value === '') {
@@ -131,8 +127,6 @@ addConfirm.addEventListener('click', async () => {
     window.alert('Fill Up Price')
   } else if (QuantityInput.value === '') {
     window.alert('Fill Up Quantity')
-  } else if (ImageInput.value === '') {
-    window.alert('Fill Up Image')
   } else {
     // requirements meet
     try {
@@ -148,7 +142,6 @@ addConfirm.addEventListener('click', async () => {
           class: ClassInput.value,
           price: PriceInput.value,
           quantity: QuantityInput.value,
-          image: ImageInput.value
         })
       })
 
@@ -160,8 +153,7 @@ addConfirm.addEventListener('click', async () => {
       ClassInput.value = ''
       PriceInput.value = ''
       QuantityInput.value = ''
-      ImageInput.value = ''
-
+      
       // refresh the list
       LoadInventory()
 
@@ -182,8 +174,7 @@ editConfirm.addEventListener('click', async () => {
   const ClassInput = EditPopUp.querySelector('#edit-class')
   const PriceInput = EditPopUp.querySelector('#edit-price')
   const QuantityInput = EditPopUp.querySelector('#edit-quantity')
-  const ImageInput = EditPopUp.querySelector('#edit-image')
-
+  
   if (ItemNameInput.value === '') {
     window.alert('Fill Up Item Name')
   } else if (ClassInput.value === '') {
@@ -192,8 +183,6 @@ editConfirm.addEventListener('click', async () => {
     window.alert('Fill Up Price')
   } else if (QuantityInput.value === '') {
     window.alert('Fill Up Quantity')
-   } else if (ImageInput.value === '') {
-    window.alert('Fill Up Image')
   } else { // requirements meet
     try {
       // send put request
@@ -208,7 +197,6 @@ editConfirm.addEventListener('click', async () => {
           class: ClassInput.value,
           price: PriceInput.value,
           quantity: QuantityInput.value,
-          image: ImageInput.value
         })
       })
 
@@ -221,8 +209,7 @@ editConfirm.addEventListener('click', async () => {
       ClassInput.value = ''
       PriceInput.value = ''
       QuantityInput.value = ''
-      ImageInput.value = ''
-
+      
       
       // refresh the list
       LoadInventory()
