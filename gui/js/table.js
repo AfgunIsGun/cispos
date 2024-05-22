@@ -7,7 +7,7 @@ function RefreshTable (PreviousData, FetchData) {
           PreviousData[i].class !== FetchData[i].class ||
           PreviousData[i].quantity !== FetchData[i].quantity ||
           PreviousData[i].price !== FetchData[i].price ||
-          PreviousData[i].image !== FetchData[i].image
+        
         ) {
           return true
         }
@@ -75,8 +75,6 @@ class Table {
           td.textContent = `₱${data[i][element]}`;
         } else if (element === 'quantity') {
           td.textContent = `${data[i][element]}x`;
-        } else if (element === 'image') {
-          td.textContent = `${data[i][element]}`;
         } else {
           td.textContent = data[i][element];
         }
