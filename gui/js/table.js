@@ -6,8 +6,7 @@ function RefreshTable (PreviousData, FetchData) {
           PreviousData[i].itemname !== FetchData[i].itemname ||
           PreviousData[i].class !== FetchData[i].class ||
           PreviousData[i].quantity !== FetchData[i].quantity ||
-          PreviousData[i].price !== FetchData[i].price ||
-        
+          PreviousData[i].price !== FetchData[i].price 
         ) {
           return true
         }
